@@ -12,10 +12,41 @@ struct HomeView: View {
     
     var body: some View {
         contentView
+            .onAppear(perform: viewModel.onAppear)
     }
     
     private var contentView: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        usersView
+    }
+    
+    private var usersView: some View {
+        ScrollView(.vertical, showsIndicators: false) {
+            LazyVStack(alignment: .leading, spacing: 16) {
+                ForEach(viewModel.users) { userView($0) }
+            }
+            .padding(.horizontal)
+        }
+    }
+    
+    private func userView(_ user: UserResponse) -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(user.name)
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .foregroundColor(.white)
+            
+            Text(user.username)
+                .font(.body)
+                .fontWeight(.semibold)
+                .foregroundColor(.white)
+        }
+        .padding(.vertical)
+        .padding(.leading)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(
+            RoundedRectangle(cornerRadius: 8)
+                .fill(Color.pink.opacity(0.6))
+        )
     }
 }
 

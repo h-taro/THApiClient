@@ -5,13 +5,13 @@
 //  Created by 平石　太郎 on 2022/10/22.
 //
 
-import ApiClient
+import THApiClient
 
 class ApiService {
-    private lazy var apiClient: ApiClient = .init()
+    private lazy var apiClient: THApiClient = .init()
     
     func getUserResponses() async throws -> [UserResponse] {
         let request = GetUserRequest()
-
+        return try await apiClient.call(request)
     }
 }

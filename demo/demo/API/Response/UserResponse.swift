@@ -6,7 +6,7 @@
 //
 
 struct UserResponse: Codable, Identifiable {
-    let id: String
+    let id: Int
     let name: String
     let username: String
 }

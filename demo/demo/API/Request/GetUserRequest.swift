@@ -5,7 +5,7 @@
 //  Created by 平石　太郎 on 2022/10/22.
 //
 
-import ApiClient
+import THApiClient
 
 struct GetUserRequest: Requestable {
     var baseURL: String {

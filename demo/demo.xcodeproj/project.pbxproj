@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7665E28629039B17001A7F4A /* ApiClient in Frameworks */ = {isa = PBXBuildFile; productRef = 7665E28529039B17001A7F4A /* ApiClient */; };
 		7665E28A29039BD3001A7F4A /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7665E28929039BD3001A7F4A /* UserResponse.swift */; };
 		7665E28C29039C21001A7F4A /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7665E28B29039C21001A7F4A /* ApiService.swift */; };
+		7665E28F29039D1B001A7F4A /* THApiClient in Frameworks */ = {isa = PBXBuildFile; productRef = 7665E28E29039D1B001A7F4A /* THApiClient */; };
+		7665E29229039DC8001A7F4A /* THLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 7665E29129039DC8001A7F4A /* THLogger */; };
 		76EED735290396F200537FDA /* demoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EED734290396F200537FDA /* demoApp.swift */; };
 		76EED737290396F200537FDA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EED736290396F200537FDA /* ContentView.swift */; };
 		76EED739290396F400537FDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76EED738290396F400537FDA /* Assets.xcassets */; };
@@ -37,7 +38,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7665E28629039B17001A7F4A /* ApiClient in Frameworks */,
+				7665E29229039DC8001A7F4A /* THLogger in Frameworks */,
+				7665E28F29039D1B001A7F4A /* THApiClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,7 +151,8 @@
 			);
 			name = demo;
 			packageProductDependencies = (
-				7665E28529039B17001A7F4A /* ApiClient */,
+				7665E28E29039D1B001A7F4A /* THApiClient */,
+				7665E29129039DC8001A7F4A /* THLogger */,
 			);
 			productName = demo;
 			productReference = 76EED731290396F200537FDA /* demo.app */;
@@ -180,7 +183,8 @@
 			);
 			mainGroup = 76EED728290396F100537FDA;
 			packageReferences = (
-				7665E28429039B17001A7F4A /* XCRemoteSwiftPackageReference "THApiClient" */,
+				7665E28D29039D1B001A7F4A /* XCRemoteSwiftPackageReference "THApiClient" */,
+				7665E29029039DC8001A7F4A /* XCRemoteSwiftPackageReference "THLogger" */,
 			);
 			productRefGroup = 76EED732290396F200537FDA /* Products */;
 			projectDirPath = "";
@@ -423,21 +427,34 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		7665E28429039B17001A7F4A /* XCRemoteSwiftPackageReference "THApiClient" */ = {
+		7665E28D29039D1B001A7F4A /* XCRemoteSwiftPackageReference "THApiClient" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/h-taro/THApiClient";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.1;
+				minimumVersion = 0.0.2;
+			};
+		};
+		7665E29029039DC8001A7F4A /* XCRemoteSwiftPackageReference "THLogger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/h-taro/THLogger";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.4;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		7665E28529039B17001A7F4A /* ApiClient */ = {
+		7665E28E29039D1B001A7F4A /* THApiClient */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 7665E28429039B17001A7F4A /* XCRemoteSwiftPackageReference "THApiClient" */;
-			productName = ApiClient;
+			package = 7665E28D29039D1B001A7F4A /* XCRemoteSwiftPackageReference "THApiClient" */;
+			productName = THApiClient;
+		};
+		7665E29129039DC8001A7F4A /* THLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7665E29029039DC8001A7F4A /* XCRemoteSwiftPackageReference "THLogger" */;
+			productName = THLogger;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -5,8 +5,17 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/h-taro/THApiClient",
       "state" : {
-        "revision" : "4a37457998764ef4381a6a4cce0b6a6bd6e022be",
-        "version" : "0.0.1"
+        "revision" : "72060cf1b922794b5421bbf3845a2f672073d4ef",
+        "version" : "0.0.2"
+      }
+    },
+    {
+      "identity" : "thlogger",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/h-taro/THLogger",
+      "state" : {
+        "revision" : "13acd2ac0bbd0042041f47d6dfff6dd373613655",
+        "version" : "0.0.4"
       }
     }
   ],
