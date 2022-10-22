@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class ApiClient {
+public class THApiClient {
     private let decoder: JSONDecoder
     private let waitTime: Int
     

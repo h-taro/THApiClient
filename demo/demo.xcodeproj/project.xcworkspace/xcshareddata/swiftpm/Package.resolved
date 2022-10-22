@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "apiclient",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/h-taro/ApiClient",
+      "state" : {
+        "revision" : "25aa33a9e38c3b1cd87a5734cf1714f13b458245",
+        "version" : "0.0.1"
+      }
+    }
+  ],
+  "version" : 2
+}
