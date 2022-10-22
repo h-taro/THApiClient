@@ -16,7 +16,7 @@ public class THApiClient {
         self.waitTime = waitTime
     }
     
-    func call<T: Codable>(_ requestable: Requestable, session: URLSession = .shared) async throws -> T {
+    public func call<T: Codable>(_ requestable: Requestable, session: URLSession = .shared) async throws -> T {
         try await withCheckedThrowingContinuation { continuation in
             guard var urlRequest = requestable.urlRequest else {
                 return continuation.resume(throwing: NetworkError.invalidRequest)

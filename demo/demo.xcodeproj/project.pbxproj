@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7665E28629039B17001A7F4A /* ApiClient in Frameworks */ = {isa = PBXBuildFile; productRef = 7665E28529039B17001A7F4A /* ApiClient */; };
+		7665E28A29039BD3001A7F4A /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7665E28929039BD3001A7F4A /* UserResponse.swift */; };
+		7665E28C29039C21001A7F4A /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7665E28B29039C21001A7F4A /* ApiService.swift */; };
 		76EED735290396F200537FDA /* demoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EED734290396F200537FDA /* demoApp.swift */; };
 		76EED737290396F200537FDA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EED736290396F200537FDA /* ContentView.swift */; };
 		76EED739290396F400537FDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76EED738290396F400537FDA /* Assets.xcassets */; };
 		76EED73C290396F400537FDA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76EED73B290396F400537FDA /* Preview Assets.xcassets */; };
-		76EED7442903978400537FDA /* ApiClient in Frameworks */ = {isa = PBXBuildFile; productRef = 76EED7432903978400537FDA /* ApiClient */; };
 		76EED749290397AB00537FDA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EED748290397AB00537FDA /* HomeViewModel.swift */; };
 		76EED74B290397B200537FDA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EED74A290397B200537FDA /* HomeView.swift */; };
 		76EED74E2903983300537FDA /* GetUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EED74D2903983300537FDA /* GetUserRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7665E28929039BD3001A7F4A /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		7665E28B29039C21001A7F4A /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		76EED731290396F200537FDA /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76EED734290396F200537FDA /* demoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demoApp.swift; sourceTree = "<group>"; };
 		76EED736290396F200537FDA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,13 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76EED7442903978400537FDA /* ApiClient in Frameworks */,
+				7665E28629039B17001A7F4A /* ApiClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7665E28729039BC2001A7F4A /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				76EED74D2903983300537FDA /* GetUserRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		7665E28829039BCA001A7F4A /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				7665E28929039BD3001A7F4A /* UserResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
 		76EED728290396F100537FDA = {
 			isa = PBXGroup;
 			children = (
@@ -105,7 +125,9 @@
 		76EED74C2903981F00537FDA /* API */ = {
 			isa = PBXGroup;
 			children = (
-				76EED74D2903983300537FDA /* GetUserRequest.swift */,
+				7665E28829039BCA001A7F4A /* Response */,
+				7665E28729039BC2001A7F4A /* Request */,
+				7665E28B29039C21001A7F4A /* ApiService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -127,7 +149,7 @@
 			);
 			name = demo;
 			packageProductDependencies = (
-				76EED7432903978400537FDA /* ApiClient */,
+				7665E28529039B17001A7F4A /* ApiClient */,
 			);
 			productName = demo;
 			productReference = 76EED731290396F200537FDA /* demo.app */;
@@ -158,7 +180,7 @@
 			);
 			mainGroup = 76EED728290396F100537FDA;
 			packageReferences = (
-				76EED7422903978400537FDA /* XCRemoteSwiftPackageReference "ApiClient" */,
+				7665E28429039B17001A7F4A /* XCRemoteSwiftPackageReference "THApiClient" */,
 			);
 			productRefGroup = 76EED732290396F200537FDA /* Products */;
 			projectDirPath = "";
@@ -191,6 +213,8 @@
 				76EED749290397AB00537FDA /* HomeViewModel.swift in Sources */,
 				76EED735290396F200537FDA /* demoApp.swift in Sources */,
 				76EED74E2903983300537FDA /* GetUserRequest.swift in Sources */,
+				7665E28C29039C21001A7F4A /* ApiService.swift in Sources */,
+				7665E28A29039BD3001A7F4A /* UserResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,9 +423,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		76EED7422903978400537FDA /* XCRemoteSwiftPackageReference "ApiClient" */ = {
+		7665E28429039B17001A7F4A /* XCRemoteSwiftPackageReference "THApiClient" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/h-taro/ApiClient";
+			repositoryURL = "https://github.com/h-taro/THApiClient";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 0.0.1;
@@ -410,9 +434,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		76EED7432903978400537FDA /* ApiClient */ = {
+		7665E28529039B17001A7F4A /* ApiClient */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 76EED7422903978400537FDA /* XCRemoteSwiftPackageReference "ApiClient" */;
+			package = 7665E28429039B17001A7F4A /* XCRemoteSwiftPackageReference "THApiClient" */;
 			productName = ApiClient;
 		};
 /* End XCSwiftPackageProductDependency section */
