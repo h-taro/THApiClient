@@ -13,6 +13,7 @@ public protocol Requestable {
     var method: HttpMethod { get }
     var headers: [String: String]? { get }
     var parameters: [String: Any]? { get }
+    var requestBody: String? { get }
 }
 
 extension Requestable {
@@ -22,7 +23,7 @@ extension Requestable {
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
         request.allHTTPHeaderFields = headers
-        request.httpBody = body
+        request.httpBody = htttpBody
         
         return request
     }
@@ -44,10 +45,12 @@ extension Requestable {
         }
     }
 
-    private var body: Data? {
-        guard [.post, .put, .patch].contains(method), let parameters = parameters else {
+
+    private var htttpBody: Data? {
+        guard [.post, .put, .patch].contains(method), let body = requestBody else {
             return nil
         }
-        return try? JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
+        
+        return body.data(using: .utf8)
     }
 }
