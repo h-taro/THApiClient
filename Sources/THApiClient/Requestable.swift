@@ -13,7 +13,7 @@ public protocol Requestable {
     var method: HttpMethod { get }
     var headers: [String: String]? { get }
     var parameters: [String: Any]? { get }
-    var body: String? { get }
+    var requestBody: String? { get }
 }
 
 extension Requestable {
@@ -47,7 +47,7 @@ extension Requestable {
 
 
     private var htttpBody: Data? {
-        guard [.post, .put, .patch].contains(method), let body = body else {
+        guard [.post, .put, .patch].contains(method), let body = requestBody else {
             return nil
         }
         
