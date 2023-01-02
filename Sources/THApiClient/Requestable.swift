@@ -38,7 +38,7 @@ extension Requestable {
     }
 
     private var queryItems: [URLQueryItem]? {
-        guard method == .get, let parameters = parameters else { return nil }
+        guard let parameters = parameters else { return }
         
         return parameters.compactMap {
             return URLQueryItem(name: $0.key, value: String(describing: $0.value))
